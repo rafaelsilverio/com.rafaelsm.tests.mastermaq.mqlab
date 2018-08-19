@@ -1,0 +1,95 @@
+{
+	"variables": [],
+	"info": {
+		"name": "mastermaq.mqlab",
+		"_postman_id": "65b7728b-1a97-8405-4379-0de5b16a610d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insert",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cnpj\" : \"66640364000144\",\n\t\"date\" : \"2018-08-08\",\n\t\"total_in_cents\" : \"233\",\n\t\"description\" : \"IRF\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find all",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction/all/66640364000144",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "find by id",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction/0759ca1c-06b1-4450-a14f-018f87ef8b4e",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "edit",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction/0759ca1c-06b1-4450-a14f-018f87ef8b4e",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cnpj\" : \"66640364000144\",\n\t\"date\" : \"2018-08-11\",\n\t\"total_in_cents\" : \"23113\",\n\t\"description\" : \"IR22F\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction/0759ca1c-06b1-4450-a14f-018f87ef8b4e",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "report",
+			"request": {
+				"url": "http://localhost:8080/rest/financial-transaction/report/66640364000144/8/2018",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
